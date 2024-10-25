@@ -7,10 +7,12 @@ use Symfony\Component\DomCrawler\Crawler;
 
 class Buscador
 {
-    /**
-     * @param ClientInterface $httpClient
-     * @param Crawler $crawler
-     */
+    /** @var ClientInterface */
+     private $httpClient;
+
+    /** @var Crawler */
+     private $crawler;
+
     public function __construct(ClientInterface $httpClient, Crawler $crawler)
     {
         $this->httpClient = $httpClient;
@@ -21,7 +23,7 @@ class Buscador
     {
         $resposta = $this->httpClient->request('GET', $url);
 
-        $html = $resposta->getBody();
+        $html = $resposta->getBody()->__tostring();
 
         $this->crawler->addHtmlContent($html);
 
@@ -33,6 +35,5 @@ class Buscador
         }
 
         return $cursos;
-
     }
 }

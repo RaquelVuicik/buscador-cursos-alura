@@ -17,15 +17,14 @@ class TestBuscadorDeCursos extends TestCase
     protected function setUp(): void
     {
         $html = <<<FIM
-        <html>
-            <body>
-                <span class="card-curso__nome">Curso Teste 1</span>
-                <span class="card-curso__nome">Curso Teste 2</span>
-                <span class="card-curso__nome">Curso Teste 3</span>
-            </body>
-        </html>
-        FIM;
-
+<html>
+    <body>
+        <span class="card-curso__nome">Curso Teste 1</span>
+        <span class="card-curso__nome">Curso Teste 2</span>
+        <span class="card-curso__nome">Curso Teste 3</span>
+    </body>
+</html>
+FIM;
 
         $stream = $this->createMock(StreamInterface::class);
         $stream
