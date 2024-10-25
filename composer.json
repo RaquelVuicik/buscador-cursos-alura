@@ -1,0 +1,16 @@
+{
+    "name": "raquel/buscador-cursos-alura",
+    "description": "Projeto que busca os cursos no site da Alura",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Raquel Vuicik",
+            "email": "raquelvuicik1@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^6.3",
+        "symfony/dom-crawler": "^4.2",
+        "symfony/css-selector": "^5.4"
+    }
+}
